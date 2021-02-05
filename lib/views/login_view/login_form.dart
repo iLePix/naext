@@ -8,6 +8,8 @@ import 'package:naext/widgets/inputs/login_input.dart';
 
 import 'package:naext/blocs/authentication_bloc/authentication_bloc.dart';
 
+import '../../app_localizations.dart';
+
 class LoginForm extends StatefulWidget {
 
   _LoginForm createState() => _LoginForm();
@@ -59,7 +61,7 @@ class _LoginForm extends State<LoginForm> {
                 padding: EdgeInsets.all(30.0),
                 child: Column(
                   children: <Widget>[
-                    LoginInput(stream: _loginBloc.username, controller: _loginBloc.usernameTextController, onChanged: _loginBloc.usernameChanged ,labelText: 'Benutzername', isPassword: false, keyBoardType: TextInputType.emailAddress),
+                    LoginInput(stream: _loginBloc.username, controller: _loginBloc.usernameTextController, onChanged: _loginBloc.usernameChanged ,labelText: Lang.get(context, 'login.username'), isPassword: false, keyBoardType: TextInputType.emailAddress),
                     passwordInput(),
                     forgotPassword(),
                     Container(
@@ -86,7 +88,7 @@ class _LoginForm extends State<LoginForm> {
           padding: EdgeInsets.symmetric(vertical: 10),
           child: GestureDetector(
             onTap: () =>  _forgotPassword(),
-            child:  Text("Passwort vergessen?", style: TextStyle(color: FOREGROUND_COLOR, decoration: TextDecoration.underline, fontWeight: FontWeight.w600),),
+            child:  TText("login.forgotPassword", context, style: TextStyle(color: FOREGROUND_COLOR, decoration: TextDecoration.underline, fontWeight: FontWeight.w600),),
           ),
         )
     );
@@ -116,7 +118,7 @@ class _LoginForm extends State<LoginForm> {
                       color: FOREGROUND_COLOR,
                     ),
                   ),
-                  labelText: 'Password',
+                  labelText: Lang.get(context, 'login.password'),
                   labelStyle: TextStyle(color: FOREGROUND_COLOR),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -140,7 +142,7 @@ class _LoginForm extends State<LoginForm> {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     borderSide: BorderSide(
-                      color: BACKGROUND_COLOR,
+                      color: Colors.grey,
                       width: 1.0,
                     ),
                   ),
@@ -171,14 +173,18 @@ class _LoginForm extends State<LoginForm> {
                       child: InkWell(
                           onTap: snapshot.hasData ? () => _submit() : null,
                           child: Container(
-                            width: 300,
                             height: 50,
                             decoration: snapshot.hasData ? BoxDecoration(
                               color: FOREGROUND_COLOR,
                             ) : BoxDecoration(
                               color: FOREGROUND_COLOR.withOpacity(0.3),),
                             child: Center(
-                              child: Text("LOGIN", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                              child: TText(
+                                "login.login", context,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           )
                       ),)

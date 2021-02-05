@@ -8,6 +8,8 @@ import 'package:naext/views/loading/loading_view.dart';
 import 'package:naext/blocs/authentication_bloc/authentication_bloc.dart';
 import 'package:naext/widgets/error_handler/error_handler.dart';
 
+import '../../app_localizations.dart';
+
 class RegistrationForm extends StatefulWidget {
   @override
   _RegistrationFormState createState() => _RegistrationFormState();
@@ -77,7 +79,10 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       ),
                     ),
                     _agreementCheck(),
-                    _submitButton(_registrationBloc),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 70),
+                      child: _submitButton(_registrationBloc),
+                    ),
                     backToLoginButton(),
                   ],
                 ),
@@ -92,8 +97,8 @@ class _RegistrationFormState extends State<RegistrationForm> {
           padding: EdgeInsets.symmetric(vertical: screenSize.height*0.1),
           child: GestureDetector(
             onTap: () => _toLogin(),
-            child: Text(
-              "Zurück zum Login",
+            child: TText(
+              "login.backToLogin", context,
               style: TextStyle(
                   color: FOREGROUND_COLOR,
                   decoration: TextDecoration.underline,
@@ -131,8 +136,8 @@ class _RegistrationFormState extends State<RegistrationForm> {
                             color: FOREGROUND_COLOR.withOpacity(0.3),
                           ),
                           child: Center(
-                            child: Text(
-                              "LOGIN",
+                            child: TText(
+                              "login.signUp", context,
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
@@ -185,7 +190,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     borderSide: BorderSide(
-                      color: BACKGROUND_COLOR,
+                      color: Colors.grey,
                       width: 1.0,
                     ),
                   ),
@@ -235,7 +240,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     borderSide: BorderSide(
-                      color: BACKGROUND_COLOR,
+                      color: Colors.grey,
                       width: 1.0,
                     ),
                   ),
@@ -270,7 +275,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                       color: FOREGROUND_COLOR,
                     ),
                   ),
-                  labelText: 'Password',
+                  labelText: Lang.get(context, 'login.password'),
                   labelStyle: TextStyle(color: FOREGROUND_COLOR),
                   focusedErrorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
@@ -294,7 +299,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                     borderSide: BorderSide(
-                      color: BACKGROUND_COLOR,
+                      color: Colors.grey,
                       width: 1.0,
                     ),
                   ),
@@ -331,7 +336,7 @@ class _RegistrationFormState extends State<RegistrationForm> {
                           text: TextSpan(
                               style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400, fontSize: 15),
                               children: [
-                                TextSpan(text: "By using YourEco, you accept our "),
+                                TextSpan(text: "By using Naext, you accept our "),
                                 TextSpan(text: "Privacy Policy ", style: TextStyle(color: FOREGROUND_COLOR, fontWeight: FontWeight.w800)),
                                 TextSpan(text: "as well as the "),
                                 TextSpan(text: "General terms and conditions", style: TextStyle(color: FOREGROUND_COLOR, fontWeight: FontWeight.w800)),

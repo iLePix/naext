@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:naext/services/colors.dart';
 import 'package:naext/views/registration_view/registration_form.dart';
 
+import '../../app_localizations.dart';
+
 
 
 
@@ -22,9 +24,10 @@ class RegistrationViewState extends State<RegistrationView> {
     screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registration', style: TextStyle(color: FOREGROUND_COLOR),),
+        title: TText('login.registration', context, style: TextStyle(color: FOREGROUND_COLOR),),
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: FOREGROUND_COLOR),
+        elevation: 0,
       ),
       backgroundColor: BACKGROUND_COLOR,
       body: SingleChildScrollView(

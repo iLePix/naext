@@ -35,6 +35,7 @@ class _StartViewState extends State<StartView> {
     return Container(
       child: Column(
         children: [
+          Image.asset('assets/img/vw.png'),
           TText('login.bigText', context, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),),
           SizedBox(height: 10,),
         ],

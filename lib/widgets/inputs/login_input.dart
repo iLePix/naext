@@ -58,7 +58,7 @@ class _LoginInput extends State<LoginInput> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: BACKGROUND_COLOR,
+                    color: Colors.grey,
                     width: 1.0,
                   ),
                 ),

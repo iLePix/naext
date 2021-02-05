@@ -1,0 +1,104 @@
+generic.loading;Loading ...
+generic.noResults;No results found
+generic.loadMore;Load more
+generic.swipeToReload;Swipe to reload
+;
+login.username;Username
+login.password;Password
+login.login;Log in
+login.email;E-Mail
+login.bigText;Be the change.
+login.registerNow;Sign up
+login.new;New here?
+login.forgotPassword;Forgot your password?
+login.error;Failed to Login
+login.changePassword;Change Password
+login.backToLogin;Back
+login.signUp;Sign up
+login.registration;Registration
+;
+articles.header;Article
+;
+app.updateRequired;The app requires an update
+app.currentVersion;Current version
+;
+button.cancel;Cancel
+button.accept;Accept
+button.edit;Edit
+button.submit;Submit
+button.ok;OK
+button.donate;Donate
+;
+picture.uploadText;Upload profile picture
+picture.uploadChoose;Choose option
+picture.take;Take photo
+picture.choose;Choose photo
+picture.delete;Remove photo
+;
+challenge.challenges;Challenges
+challenge.challengeFriends;Challenge friends
+challenge.challengeRequests;Challenge requests
+challenge.participate;Participate
+challenge.daysDuration;{0} Days
+challenge.completed;Completed challenges
+;
+error.errorMessage;An error has occurred
+;
+;
+search.search;Search
+;
+detailedView.earth;You are living for {0} earths
+detailedView.improveSuggestion;Try to live even more environmentally friendly!
+;
+;
+navigation.home;Home
+navigation.challenges;Challenges
+navigation.friends;Friends
+navigation.profile;Profile
+;
+;
+loading.loading;Loading
+;
+language.chooseText;Choose Language
+language.english;English
+language.german;German
+;
+;
+articleView.header;Article
+;
+friends.friends;Friends
+friends.incoming;Incoming
+friends.outgoing;Outgoing
+friends.header;Friends
+friends.requests;Friend requests
+friends.add;Add
+friends.revoke;Revoke
+friends.accept;Accept
+friends.remove;Remove
+friends.isfriends;Is friend
+friends.requested;Requested
+friends.addFriends;Add Friends
+;
+addFriendsView.header;Add friends
+user.addFriend;Add friend
+;
+;
+;
+dailyReflectionView.header;Daily reflection
+;
+;
+gtc;Terms and Conditions
+;
+;
+;
+settingsView.settings;Settings
+settingsView.edit;Edit
+settingsView.gtcs;Terms and Conditions
+settingsView.changeLanguage;Change Language
+settingsView.changePassword;Change Password
+settingsView.logout;Logout
+settingsView.deleteAccount;Delete account
+;
+;
+;
+feed.hasAcceptedYourFriendRequest;Placeholder
