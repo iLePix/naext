@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:naext/blocs/authentication_bloc/authentication_bloc.dart';
 import 'package:naext/blocs/bloc_provider.dart';
-import 'package:naext/views/forgotpassword/forgotpassword.dart';
+import 'package:naext/views/forgot_password/forgot_password.dart';
 import 'package:naext/views/authenticated_application/authenticated_application.dart';
+import 'package:naext/views/main/main_view.dart';
 import 'package:naext/views/unauthicated_application/unauthenticated_application.dart';
+
+import 'package:naext/views/loading/loading_view.dart';
 
 
 

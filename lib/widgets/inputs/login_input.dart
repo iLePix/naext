@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:youreco/utils/colors.dart';
+import 'package:naext/services/colors.dart';
 
 
 class LoginInput extends StatefulWidget {
@@ -58,7 +58,7 @@ class _LoginInput extends State<LoginInput> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: DARKBACKGROUND_COLOR,
+                    color: BACKGROUND_COLOR,
                     width: 1.0,
                   ),
                 ),

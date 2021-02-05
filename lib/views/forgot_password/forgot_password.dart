@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:naext/app_localizations.dart';
 import 'package:naext/blocs/bloc_provider.dart';
-import 'package:naext/blocs/forms/forgot_password_form/forgot_password_form_validator_bloc.dart';
+import 'package:naext/blocs/forms/forgot_password_form/forgot_password_bloc.dart';
 import 'package:naext/blocs/forms/forgot_password_form/forgot_password_form_validator.dart';
 import 'package:naext/services/colors.dart';
 import 'package:naext/views/loading/loading_view.dart';
@@ -227,7 +227,7 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   borderSide: BorderSide(
-                    color: DARKBACKGROUND_COLOR,
+                    color: BACKGROUND_COLOR,
                     width: 1.0,
                   ),
                 ),

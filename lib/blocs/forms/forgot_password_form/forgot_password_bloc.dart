@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:naext/api/naext_api.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:naext/states/datastate.dart';
-import 'package:naext//api/payloads/auth/PasswordResetRequest.dart';
-import 'package:youreco/api/youreco_api.dart';
-import 'package:youreco/blocs/forms/forgot_password_form/forgot_password_form_validator.dart';
+import 'package:naext/blocs/forms/forgot_password_form/forgot_password_form_validator.dart';
 
-import 'bloc_provider.dart';
+import 'package:naext/blocs/bloc_provider.dart';
+import 'package:naext/blocs/bloc_base.dart';
 
 class ForgotPasswordBloc extends BlocBase with ForgotPasswordFormValidator {
 
@@ -39,7 +37,7 @@ class ForgotPasswordBloc extends BlocBase with ForgotPasswordFormValidator {
   Future<void> sendMail() async {
     _sentMailController.sink.add(DataState.loading());
     try {
-      await _yourEcoApi.authRequestPasswordReset(emailTextController.text).then((value) => _sentMailController.sink.add(DataState.loaded(true)));
+      await _naextApi.authRequestPasswordReset(emailTextController.text).then((value) => _sentMailController.sink.add(DataState.loaded(true)));
     } catch (err) {
       print("ForgotPasswordBloc.sendMail : " + err.toString());
       _sentMailController.sink.add(DataState.error(error: err));

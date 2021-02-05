@@ -2,8 +2,8 @@ import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:naext/blocs/bloc_provider.dart';
 import 'package:naext/blocs/pushnotification_bloc/pushnotification_bloc.dart';
-import 'package:youreco/models/pushnotification.dart';
-import 'package:youreco/utils/colors.dart';
+import 'package:naext/models/pushnotification.dart';
+import 'package:naext/services/colors.dart';
 
 class AuthenticatedApplication extends StatefulWidget {
 

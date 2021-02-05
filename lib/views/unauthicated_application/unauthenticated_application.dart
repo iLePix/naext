@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:youreco/views/registration_view/registration_view.dart';
-import 'package:youreco/views/start_view/start_view.dart';
+import 'package:naext/views/registration_view/registration_view.dart';
+import 'package:naext/views/start_view/start_view.dart';
 
 class UnauthenticatedApplication extends StatefulWidget {
   @override
