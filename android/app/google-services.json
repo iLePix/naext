@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161993637780",
+    "project_id": "naext-mobile-client",
+    "storage_bucket": "naext-mobile-client.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161993637780:android:01261110e6af97dbc71981",
+        "android_client_info": {
+          "package_name": "com.naext.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161993637780-adbno6h4uvoo9s791h4sqcbfka54usle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOXeqWgmmCsfWCcaabFaf3bqd_Qz5e_7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161993637780-adbno6h4uvoo9s791h4sqcbfka54usle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

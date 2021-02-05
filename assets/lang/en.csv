@@ -17,6 +17,8 @@ login.backToLogin;Back
 login.signUp;Sign up
 login.registration;Registration
 ;
+forgotPassword.sentMail;Sent Email
+;
 articles.header;Article
 ;
 app.updateRequired;The app requires an update

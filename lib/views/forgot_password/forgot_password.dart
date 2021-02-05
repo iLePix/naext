@@ -87,18 +87,52 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                     labelText: 'Email',
                     isPassword: false,
                     keyBoardType: TextInputType.emailAddress),
-                FlatButton(
-                  onPressed: () {
-                    _forgotPasswordBloc.sendMail();
-                  },
-                  child: Text("Send Mail"),
-                )
+                _sentMailButton()
               ],
             );
           }
       ),
     );
   }
+
+  Widget _sentMailButton() {
+    return Padding(
+      padding: EdgeInsets.only(top: 20),
+      child: StreamBuilder<bool>(
+          stream: _forgotPasswordBloc.sendMailCheck,
+          builder: (context, snapshot) => Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                        onTap: () => snapshot.hasData ? sendMail() : null,
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          height: 50,
+                          decoration: snapshot.hasData
+                              ? BoxDecoration(
+                            color: FOREGROUND_COLOR,
+                          )
+                              : BoxDecoration(
+                            color: FOREGROUND_COLOR.withOpacity(0.3),
+                          ),
+                          child: Center(
+                            child: TText(
+                              "forgotPassword.sentMail", context,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        )),
+                  )))),
+    );
+  }
+
+
+
 
   void backToMailPage() {
     _pageController.animateToPage(

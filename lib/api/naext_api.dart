@@ -34,7 +34,10 @@ class NaextApi {
 
   Future<void> usersDeleteAccount(String password) {}
   Future<void> authLogout() {}
-  Future<Version> appRequiredVersion() {}
+
+  Future<Version> appRequiredVersion() {
+    return Future.delayed(Duration(seconds: 1)).then((_) => Version(major: 1, minor: 0, patch: 0));
+  }
   Future<void> authResetPassword() {}
 
   authRequestPasswordReset(String email) {}

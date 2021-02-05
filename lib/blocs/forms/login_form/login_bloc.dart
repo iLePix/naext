@@ -5,11 +5,10 @@ import 'package:naext/api/naext_api.dart';
 import 'package:naext/blocs/bloc_base.dart';
 import 'package:naext/blocs/forms/login_form/login_form_validator.dart';
 
-import 'package:naext/api/naext_api.dart';
 
 class LoginBloc extends BlocBase with LoginFormValidator {
 
-  final NaextApi _yourEcoApi = new NaextApi();
+  final NaextApi _naextApi = new NaextApi();
 
   final BehaviorSubject<LoginState> _loginStateController = BehaviorSubject<LoginState>();
   final TextEditingController usernameTextController = TextEditingController();
@@ -34,7 +33,7 @@ class LoginBloc extends BlocBase with LoginFormValidator {
     }
     _loginStateController.sink.add(LoginState(loading: true));
     /*try {
-      await _yourEcoApi.authLogin(new LoginRequest(
+      await _naextApi.authLogin(new LoginRequest(
           fcmToken: await FirebaseMessaging().getToken(),
           username: usernameTextController.text,
           password: passwordTextController.text));

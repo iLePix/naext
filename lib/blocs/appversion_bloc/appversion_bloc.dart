@@ -21,9 +21,10 @@ class AppVersionBloc extends BlocBase {
 
     print("App-Name : " + packageInfo.appName + " Package-Name : " + packageInfo.packageName + " App-Version : " + packageInfo.version + " App-Build-Number : " + packageInfo.buildNumber);
     List<String> installedAppVersion = packageInfo.version.split(".");
+
+    //TODO: NOT FUNCTIONAL
     try {
       _naextApi.appRequiredVersion().then((Version requiredAppVersion) {
-        print(requiredAppVersion.toString());
         if (requiredAppVersion.major > int.parse(installedAppVersion[0])) {
           _versionController.sink.add(true);
         } else {

@@ -31,8 +31,7 @@ class ForgotPasswordBloc extends BlocBase with ForgotPasswordFormValidator {
   Stream<String> get token => _tokenController.stream.transform(tokenValidator);
   Stream<String> get password => _passwordController.stream.transform(passwordValidator);
 
-
-
+  Stream<bool> get sendMailCheck => Rx.combineLatest2(email, email, (e,t) => true);
 
   Future<void> sendMail() async {
     _sentMailController.sink.add(DataState.loading());

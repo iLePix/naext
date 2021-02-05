@@ -1,4 +1,4 @@
-package com.example.naext
+package com.naext.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 
