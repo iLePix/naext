@@ -45,7 +45,7 @@ class _AuthenticatedApplicationState extends State<AuthenticatedApplication> {
         isDismissible: true,
         duration: Duration(seconds: 5),
         titleText: Text(
-          "Freundesanfrage", //TODO : WHEN friendrequest
+          "PUSHNOTIFICATION", //TODO : WHEN friendrequest
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 20.0, color: FOREGROUND_COLOR, fontFamily: "ShadowsIntoLightTwo"),
         ),

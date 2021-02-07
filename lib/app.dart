@@ -34,7 +34,7 @@ class _NaextAppState extends State<NaextApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'YourEco',
+      title: 'Naext',
       theme: ThemeData(
       ),
       locale: _locale,

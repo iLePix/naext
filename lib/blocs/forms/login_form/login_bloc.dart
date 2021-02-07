@@ -31,7 +31,8 @@ class LoginBloc extends BlocBase with LoginFormValidator {
     if (!formKey.currentState.validate()) {
       return;
     }
-    _loginStateController.sink.add(LoginState(loading: true));
+    _loginStateController.sink.add(LoginState.loading());
+    _loginStateController.sink.add(LoginState.loggedIn());
     /*try {
       await _naextApi.authLogin(new LoginRequest(
           fcmToken: await FirebaseMessaging().getToken(),
